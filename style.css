@@ -1,0 +1,25 @@
+body {
+	background-color: black;
+}
+
+h1 {
+	color: white;
+	font-family: helvetica;
+}
+
+p {
+	color: white;
+	font-family: georgia;
+}
+
+.serif {
+	font-family: serif;
+}
+
+.sans-serif {
+	font-family: sans-serif;
+}
+
+.monospace {
+	font-family: monospace;
+}
