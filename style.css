@@ -50,11 +50,7 @@ body {
 
 h1 {
 	color: white;
-<<<<<<< HEAD
 	font-family: "Helvetica Neue", Helvetica, sans-serif;
-=======
-	font-family: sans-serif;
->>>>>>> d7789571ba4c8e944d323e512f37afad19961921
 	font-size: 28pt;
 }
 
@@ -66,7 +62,7 @@ h2 {
 
 p {
 	color: white;
-	font-family: Georgia, Times, Serif;
+	font-family: Garamond, Georgia, Times, Serif;
 	font-size: 14pt;
 }
 
