@@ -22,6 +22,8 @@ body {
 	margin-top: 3%;
 	margin-bottom: 10px;
 	text-align: left;
+	font-family: "Helveltica Neue", Helvetica, sans-serif;
+	color: white;
 }
 
 .header h1 {
@@ -33,17 +35,18 @@ body {
 	font-family: sans-serif;
 	margin-top: 20px;
 	text-align: right;
+	font-family: "Helvetica Neue", Helvetica, sans-serif;
 	color: white;	
 }
 
 h1 {
 	color: white;
-	font-family: helvetica, sans-serif;
+	font-family: "Helvetica Neue", Helvetica, sans-serif;
 	font-size: 28pt;
 }
 
 p {
 	color: white;
-	font-family: times, serif;
+	font-family: Georgia, Times, Serif;
 	font-size: 14pt;
 }
