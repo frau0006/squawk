@@ -31,22 +31,45 @@ body {
 	line-height: 0;
 }
 
+.header p {
+	font-family: sans-serif;
+}
+
 .footer {
 	font-family: sans-serif;
+	font-size: 12pt;
 	margin-top: 20px;
 	text-align: right;
 	font-family: "Helvetica Neue", Helvetica, sans-serif;
 	color: white;	
 }
 
+.blk-icon img {
+	-webkit-filter:invert(100%);
+}
+
 h1 {
 	color: white;
+<<<<<<< HEAD
 	font-family: "Helvetica Neue", Helvetica, sans-serif;
+=======
+	font-family: sans-serif;
+>>>>>>> d7789571ba4c8e944d323e512f37afad19961921
 	font-size: 28pt;
+}
+
+h2 {
+	color: white;
+	font-family: sans-serif;
+	font-size: 20pt;
 }
 
 p {
 	color: white;
 	font-family: Georgia, Times, Serif;
 	font-size: 14pt;
+}
+
+a {
+	color: white;
 }
