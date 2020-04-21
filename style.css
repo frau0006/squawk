@@ -20,6 +20,7 @@ body {
 	border: 2px solid white;
 	border-radius: 10px;
 	padding: 15px;
+	margin-bottom: 15px;
 }
 
 .header, .footer {
@@ -58,6 +59,7 @@ h1 {
 	color: white;
 	font-family: var(--sans); 
 	font-size: 28pt;
+	margin-top: 0;
 }
 
 h2 {
