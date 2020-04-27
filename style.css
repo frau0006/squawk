@@ -68,7 +68,7 @@ h2 {
 	font-size: 20pt;
 }
 
-p {
+p, ul {
 	color: white;
 	font-family: var(--serif);
 	font-size: 14pt;
