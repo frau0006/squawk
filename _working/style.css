@@ -1,0 +1,32 @@
+html {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.header {
+    text-align: center;
+}
+
+.welcome {
+    border-left-style: double;
+    border-bottom-style: double;
+    border-color: white;
+    border-width: 3px;
+
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+body {
+    background-color: black;
+}
+
+h1 {
+    color: white;
+}
+
+p {
+    color: white;
+}
