@@ -44,9 +44,11 @@ p {
 }
 
 a:link {
+    font-size: 16px;
     color: white;
 }
 
 a:visited {
+    font-size: 16px;
     color: #b388eb;
 }
