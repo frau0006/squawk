@@ -17,25 +17,25 @@ $codeIndexOutput += "<div class=main>`n"
 Get-ChildItem | Sort-Object -Descending | ForEach-Object {
     $codeIndexOutput += $($((Get-Content -Path $("./" + $_.Name))[1]) -replace "h1", "h3")
     $codeIndexOutput += $($((Get-Content -Path $("./" + $_.Name))[2]) -replace "h2", "h4")
-    $codeIndexOutput += " <a href=`"" + $_.Name + "`">" + $_.Name + "</a><br>`n"
+    $codeIndexOutput += " <a href=`"./pages/" + $_.Name + "`">" + $_.Name + "</a><br>`n"
 }
 Set-Location ..
 
 $codeIndexOutput += "`n</div>"
 $codeIndexOutput += $footer
 $codeIndexOutput += "`n</html>"
-Clear-Content _code_index.html
-$codeIndexOutput | Set-Content _code_index.html
+Clear-Content code_index.html
+$codeIndexOutput | Set-Content code_index.html
 
 # Create the standalone code pages
 Get-ChildItem -Path ./content | ForEach-Object {
-    New-Item -Path . -Name $_.Name -ItemType file -Force
+    New-Item -Path ./pages -Name $_.Name -ItemType file -Force
     $codeFileOutput = "<!--spekk.xyz/code, built by script on " + $(Get-Date) + "-->`n<html>`n"
-    $codeFileOutput += $(Get-Content _code_head_stub.html -Raw)
+    $codeFileOutput += $(Get-Content -Path ./pages/_code_pages_head_stub.html -Raw)
     $codeFileOutput += $header
     $codeFileOutput += $(Get-Content -Raw -Path $("./content/" + $_.Name))
     $codeFileOutput += "`n</div>"
     $codeFileOutput += $footer
     $codeFileOutput += "`n</html>"
-    $codeFileOutput | Set-Content -Path $("./" + $_.Name)
+    $codeFileOutput | Set-Content -Path $("./pages/" + $_.Name)
 }

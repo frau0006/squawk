@@ -17,25 +17,25 @@ $blogIndexOutput += "<div class=main>`n"
 Get-ChildItem | Sort-Object -Descending | ForEach-Object {
     $blogIndexOutput += $($((Get-Content -Path $("./" + $_.Name))[1]) -replace "h1", "h3")
     $blogIndexOutput += $($((Get-Content -Path $("./" + $_.Name))[2]) -replace "h2", "h4")
-    $blogIndexOutput += " <a href=`"" + $_.Name + "`">" + $_.Name + "</a><br>`n"
+    $blogIndexOutput += " <a href=`"./pages/" + $_.Name + "`">" + $_.Name + "</a><br>`n"
 }
 Set-Location ..
 
 $blogIndexOutput += "`n</div>"
 $blogIndexOutput += $footer
 $blogIndexOutput += "`n</html>"
-Clear-Content _blog_index.html
-$blogIndexOutput | Set-Content _blog_index.html
+Clear-Content blog_index.html
+$blogIndexOutput | Set-Content blog_index.html
 
 # Create the standalone blog pages
 Get-ChildItem -Path ./content | ForEach-Object {
-    New-Item -Path . -Name $_.Name -ItemType file -Force
+    New-Item -Path ./pages -Name $_.Name -ItemType file -Force
     $blogFileOutput = "<!--spekk.xyz/blog, built by script on " + $(Get-Date) + "-->`n<html>`n"
-    $blogFileOutput += $(Get-Content _blog_head_stub.html -Raw)
+    $blogFileOutput += $(Get-Content ./pages/_blog_pages_head_stub.html -Raw)
     $blogFileOutput += $header
     $blogFileOutput += $(Get-Content -Raw -Path $("./content/" + $_.Name))
     $blogFileOutput += "`n</div>"
     $blogFileOutput += $footer
     $blogFileOutput += "`n</html>"
-    $blogFileOutput | Set-Content -Path $("./" + $_.Name)
+    $blogFileOutput | Set-Content -Path $("./pages/" + $_.Name)
 }

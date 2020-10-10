@@ -2,7 +2,7 @@
 $output = "<!--spekk.xyz, built by script on " + $(Get-Date) + "-->`n<html>`n"
 
 # Add the index <head> to the output
-$output += $(Get-Content .\index_head_stub.html -Raw)
+$output += $(Get-Content .\_index_head_stub.html -Raw)
 
 # Define the header text
 $header = "<div class=header><h1 style=`"font-size:48px`">spekk's squawk box</h1><h2>the cool and good website</h2></div>"
@@ -14,7 +14,7 @@ $footer += $(Get-Date -Format "yyyy-MM-dd HH:mm") + "</p></div>"
 # Add the innards, surrounded by <body> tags
 $output += "`n<body>`n"
 $output += $header + "`n"
-$output += $(Get-Content .\index_main_stub.html -Raw) + "`n"
+$output += $(Get-Content .\_index_main_stub.html -Raw) + "`n"
 
 # Grab the latest blog and put it here
 Set-Location ./blog/content
