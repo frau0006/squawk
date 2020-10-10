@@ -28,19 +28,40 @@ body {
 }
 
 h1 {
+    margin: 0px;
     font-size: 32px;
     color: #72ddf7;
 }
 
 h2 {
+    margin: 0px;
     font-size: 24px;
     color: #f7aef8;
     font-style: italic;
 }
 
+h3 {
+    margin: 0px;
+    font-size: 16px;
+    color: #72ddf7;
+    display: inline-block;
+}
+
+h4 {
+    margin: 0px;
+    font-size: 16px;
+    color: #f7aef8;
+    font-style: italic;
+    display: inline-block;
+}
+
 p {
     font-size: 16px;
     color: white;
+}
+
+a {
+    margin: 0px;
 }
 
 a:link {
